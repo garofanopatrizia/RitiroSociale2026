@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarica la Dispensa Ufficiale del Corso</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        carta: {
+                            50: '#f4f7f9',
+                            100: '#e8edf2',
+                            200: '#cdd8e4',
+                            300: '#a3b8cd',
+                            400: '#7494b2',
+                            500: '#52779a',
+                            600: '#3f5e7c',
+                            700: '#344c64',
+                            800: '#2d3f52',
+                            900: '#273545',
+                        },
+                        azzurro: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            750: '#0369a1',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-carta-50 text-slate-700 antialiased selection:bg-azzurro-100 selection:text-azzurro-700 min-h-screen flex flex-col justify-between">
+
+    <header class="w-full py-6 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-carta-600 flex items-center justify-center text-white shadow-md">
+                <i class="fa-solid fa-graduation-cap text-lg"></i>
+            </div>
+            <span class="font-bold text-lg text-carta-800 tracking-tight">Formazione & Crescita</span>
+        </div>
+        <div class="text-sm font-medium text-carta-500">
+            <i class="fa-regular fa-clock mr-1"></i> Risorsa Gratuita
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="max-w-7xl mx-auto px-6 md:px-12 py-12 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Column: Copy & Form -->
+            <div class="lg:col-span-7 space-y-8">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-carta-100 text-carta-700 text-sm font-medium">
+                    <span class="w-2 h-2 rounded-full bg-azzurro-600 animate-pulse"></span>
+                    Materiale Didattico Ufficiale
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-carta-900 tracking-tight leading-tight">
+                    Scarica la dispensa pratica del <span class="text-carta-600">corso</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-carta-600 font-normal leading-relaxed">
+                    Un compendio completo pensato per accompagnarti passo dopo passo. Strumenti operativi, schede di lavoro e approfondimenti per applicare subito i concetti chiave.
+                </p>
+
+                <!-- Value Props Bullet Points -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-start space-x-3">
+                        <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-carta-200 text-carta-700 flex items-center justify-center text-xs font-bold">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="text-sm font-medium text-carta-800">Esempi pratici pronti all'uso</span>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-carta-200 text-carta-700 flex items-center justify-center text-xs font-bold">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="text-sm font-medium text-carta-800">Schede di auto-valutazione</span>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-carta-200 text-carta-700 flex items-center justify-center text-xs font-bold">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="text-sm font-medium text-carta-800">Concetti chiave sintetizzati</span>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-carta-200 text-carta-700 flex items-center justify-center text-xs font-bold">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="text-sm font-medium text-carta-800">Formato PDF digitale ottimizzato</span>
+                    </div>
+                </div>
+
+                <!-- Form Card / Download Box -->
+                <div id="form-container" class="glass-card p-6 sm:p-8 rounded-3xl border border-carta-200 shadow-xl transition-all duration-300">
+                    <div id="form-view">
+                        <h3 class="text-xl font-bold text-carta-900 mb-2">Ottieni subito il tuo accesso gratuito</h3>
+                        <p class="text-sm text-carta-500 mb-6">Inserisci i tuoi dati per ricevere immediatamente il link di download.</p>
+                        
+                        <form id="download-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <label for="fullname" class="block text-xs font-semibold text-carta-700 uppercase tracking-wider mb-1.5">Il tuo Nome</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-carta-400">
+                                        <i class="fa-regular fa-user"></i>
+                                    </span>
+                                    <input type="text" id="fullname" required placeholder="es. Mario Rossi" 
+                                        class="w-full pl-11 pr-4 py-3 rounded-xl bg-white border border-carta-200 text-carta-900 focus:outline-none focus:ring-2 focus:ring-carta-500 focus:border-transparent transition text-sm">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-xs font-semibold text-carta-700 uppercase tracking-wider mb-1.5">Il tuo Indirizzo Email</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-carta-400">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </span>
+                                    <input type="email" id="email" required placeholder="mario.rossi@esempio.it" 
+                                        class="w-full pl-11 pr-4 py-3 rounded-xl bg-white border border-carta-200 text-carta-900 focus:outline-none focus:ring-2 focus:ring-carta-500 focus:border-transparent transition text-sm">
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <button type="submit" 
+                                    class="w-full py-3.5 px-6 rounded-xl bg-carta-700 hover:bg-carta-800 text-white font-semibold shadow-lg shadow-carta-700/20 transition-all duration-200 flex items-center justify-center space-x-2 group">
+                                    <span>Scarica la Dispensa Gratuita</span>
+                                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+
+                            <p class="text-xs text-center text-carta-400 mt-3">
+                                <i class="fa-solid fa-shield-halved mr-1"></i> I tuoi dati sono al sicuro. Nessun invio di spam.
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Success State (Initially Hidden) -->
+                    <div id="success-view" class="hidden text-center py-6 space-y-4">
+                        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl shadow-inner animate-bounce">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-carta-900">Ottimo lavoro, <span id="user-name-display" class="text-carta-600"></span>!</h3>
+                        <p class="text-sm text-carta-600 max-w-md mx-auto">
+                            La dispensa è pronta per essere scaricata. Abbiamo inviato una copia di cortesia anche al tuo indirizzo email.
+                        </p>
+                        <div class="pt-4 flex flex-col sm:flex-row justify-center gap-3">
+                            <button onclick="simulateDownload()" 
+                                class="py-3.5 px-8 rounded-xl bg-azzurro-600 hover:bg-azzurro-700 text-white font-semibold shadow-lg shadow-azzurro-600/30 transition-all flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-download"></i>
+                                <span>Scarica PDF Ora (2.4 MB)</span>
+                            </button>
+                        </div>
+                        <p class="text-xs text-carta-400 pt-2">Il download partirà immediatamente sul tuo dispositivo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual Mockup / Preview -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <!-- Background decorative glow -->
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-carta-200 to-azzurro-100 rounded-3xl blur-2xl opacity-70 -z-10"></div>
+                    
+                    <!-- Document Mockup Container -->
+                    <div class="glass-card p-6 rounded-3xl border border-carta-200 shadow-2xl relative overflow-hidden transform hover:scale-[1.01] transition-transform duration-300">
+                        <!-- Top bar mockup -->
+                        <div class="flex items-center justify-between pb-4 border-b border-carta-100 mb-6">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-rose-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                            </div>
+                            <span class="text-xs font-semibold text-carta-400 uppercase tracking-widest">Anteprima PDF</span>
+                        </div>
+
+                        <!-- Mockup page content -->
+                        <div class="space-y-4 bg-white p-6 rounded-2xl border border-carta-100 shadow-sm">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="w-10 h-10 rounded-lg bg-carta-100 flex items-center justify-center text-carta-600">
+                                    <i class="fa-solid fa-file-lines text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-carta-900 text-sm">Dispensa Ufficiale del Corso</h4>
+                                    <p class="text-xs text-carta-400">Edizione Aggiornata</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2 pt-2">
+                                <div class="h-4 bg-carta-100 rounded-full w-full"></div>
+                                <div class="h-4 bg-carta-100 rounded-full w-5/6"></div>
+                                <div class="h-4 bg-carta-100 rounded-full w-4/6"></div>
+                            </div>
+
+                            <div class="p-4 bg-carta-50 rounded-xl border border-carta-100 my-4">
+                                <div class="h-3 bg-carta-200 rounded-full w-1/2 mb-2"></div>
+                                <div class="h-3 bg-carta-100 rounded-full w-full"></div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <div class="h-4 bg-carta-100 rounded-full w-11/12"></div>
+                                <div class="h-4 bg-carta-100 rounded-full w-3/4"></div>
+                            </div>
+
+                            <div class="pt-4 flex justify-between items-center text-xs text-carta-400 border-t border-carta-100 mt-6">
+                                <span>Pagine: 24</span>
+                                <span class="text-carta-600 font-medium">Lettura stimata: 35 min</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-carta-600/10 rounded-full blur-xl pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="w-full py-8 px-6 text-center text-xs text-carta-400 border-t border-carta-200 mt-12 bg-white">
+        <p>&copy; 2026 Formazione & Crescita. Tutti i diritti riservati. Materiale didattico protetto.</p>
+    </footer>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const fullName = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            
+            if (!fullName || !email) return;
+
+            // Display user name in success state
+            const firstName = fullName.split(' ')[0];
+            document.getElementById('user-name-display').textContent = firstName;
+
+            // Smooth transition between form view and success view
+            const formView = document.getElementById('form-view');
+            const successView = document.getElementById('success-view');
+
+            formView.style.opacity = '0';
+            setTimeout(() => {
+                formView.classList.add('hidden');
+                successView.classList.remove('hidden');
+                successView.style.opacity = '0';
+                setTimeout(() => {
+                    successView.style.transition = 'opacity 0.4s ease-in-out';
+                    successView.style.opacity = '1';
+                }, 50);
+            }, 200);
+        }
+
+        function simulateDownload() {
+            // Simulated download action
+            const blob = new Blob(["Questa è la dispensa ufficiale del corso. Contenuto dimostrativo scaricato con successo."], { type: "text/plain;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = "Dispensa_Ufficiale_Corso.txt";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
